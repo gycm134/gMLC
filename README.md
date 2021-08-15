@@ -9,6 +9,9 @@ The genetic operators are remplaced by two phases:
 - exploitation (downhill simplex)
 - exploration (evolution with mutation and crossover)
 
+## Publication
+Cornejo Maceda, G., Li, Y., Lusseyran, F., Morzyński, M., & Noack, B. (2021). Stabilization of the fluidic pinball with gradient-enriched machine learning control. <i>Journal of Fluid Mechanics,</i> <i>917</i>, A42. doi:10.1017/jfm.2021.301
+
 ## Getting Started
 
 Unzip the tar.gz file.
