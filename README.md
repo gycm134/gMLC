@@ -33,6 +33,11 @@ The main folder should contain the following folders and files:
 - *Plant/* contains all the problems and associated parameters. One folder for each problem. Default parameters are in *gMLC_tools/*.
 - *save_runs/* contains the savings.
 
+
+This contains a modified version of xML (https://github.com/gycm134/xMLC) which is an implementation of MLC based on linear genetic programming.
+This work is also inspired by OpenMLC-MATLAB-2 (https://github.com/tduriez/OpenMLC-Matlab-2) by T. Duriez, an implementation of MLC based on tree-based genetic programming.
+
+
 ### Initialization and run
 
 To start, run matlab in the main folder, then run Initialization.m to load the folders and class object.
