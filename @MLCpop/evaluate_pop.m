@@ -3,12 +3,11 @@ function pop = evaluate_pop(pop,idx_to_evaluate,MLC_parameters,MLC_table)
     % The individuals to evaluate in a population are given by idx_to_evaluate.
     % The data base (table) is updated consequently.
     %
-    % Guy Y. Cornejo Maceda, 01/24/2020
     %
     % See also create_pop, evolve_pop, MLCpop.
 
-    % Copyright: 2020 Guy Cornejo Maceda (gy.cornejo.maceda@gmail.com)
-    % CC-BY-SA
+    %   Copyright (C) 2015-2017 Thomas Duriez.
+    %   This file is adapted from @MLCpop/evaluate.m of the OpenMLC-Matlab-2 Toolbox. Distributed under GPL v3.
 
 
 indiv_to_evaluate = pop.individuals(idx_to_evaluate);
