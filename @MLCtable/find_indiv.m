@@ -2,12 +2,11 @@ function IndexIndiv = find_indiv(MLC_table,indiv)
     % FIND_INDIV finds indices of indiv
     % Checks if the individual already exists.
     %
-    % Guy Y. Cornejo Maceda, 01/24/2020
     %
     % See also MLC, MLCpop, MLCind.
 
-    % Copyright: 2020 Guy Cornejo Maceda (gy.cornejo.maceda@gmail.com)
-    % CC-BY-SA
+    % Copyright (C) 2015-2019 Thomas Duriez.
+    % This file is adapted from @MLCtable/find_individual.m of the OpenMLC-Matlab-2 Toolbox. Distributed under GPL v3.
 
 %% Initialization
   IndexIndiv = [];
