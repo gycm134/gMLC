@@ -1,12 +1,11 @@
 function q=my_div(x,y)
     % MY_DIV customized version of division
     %
-    % Guy Y. Cornejo Maceda, 01/24/2020
     %
     % See also my_exp, my_log, opset.
 
-    % Copyright: 2020 Guy Cornejo Maceda (gy.cornejo.maceda@gmail.com)
-    % CC-BY-SA
+    % Copyright (C) 2015-2019 Thomas Duriez.
+    % This file is part of the OpenMLC-Matlab-2 Toolbox. Distributed under GPL v3.
 
 protection = 1e-3;
 
