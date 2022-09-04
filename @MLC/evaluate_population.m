@@ -3,12 +3,11 @@ function evaluate_population(MLC,Gen)
     % Evaluates Gen population of MLC if it is not evaluated.
     % It should only be used for problem that require an evaluation with matlab.
     %
-    % Guy Y. Cornejo Maceda, 01/24/2020
     %
     % See also evaluate_population, evolve_population
 
-    % Copyright: 2020 Guy Cornejo Maceda (gy.cornejo.maceda@gmail.com)
-    % CC-BY-SA
+    %   Copyright (C) 2015-2017 Thomas Duriez.
+    %   This file is adapted from @MLC2/evaluate_population.m of the OpenMLC-Matlab-2 Toolbox. Distributed under GPL v3.
 
 %% Parameters
     EvaluationFunction = MLC.parameters.EvaluationFunction;
