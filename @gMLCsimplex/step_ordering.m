@@ -1,4 +1,4 @@
-function gMLC_simplex=step_ordering(gMLC_simplex,gMLC_table,gMLC_parameters)
+function gMLC_simplex=step_ordering(gMLC_simplex,gMLC_parameters)
 % gMLCsimplex class step_ordering method
 %
 % Rearrange the labels following the costs.

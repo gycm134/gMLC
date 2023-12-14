@@ -9,8 +9,8 @@ function complete_EXE(gMLC,optimization_type,matJ)
     BadValue = gMLC.parameters.BadValue;
     BS = gMLC.parameters.SimplexSize;
     Name = gMLC.parameters.Name;
-    ExternalStopEvo = gMLC.parameters.ExternalStopEvo;
-    ExternalStopExiEvo = gMLC.parameters.ExternalStopExiEvo;
+%     ExternalStopEvo = gMLC.parameters.ExternalStopEvo;
+%     ExternalStopExiEvo = gMLC.parameters.ExternalStopExiEvo;
     ExternalStop = gMLC.parameters.ExternalStop;
     ExternalStopExi = gMLC.parameters.ExternalStopExi;
     % Path

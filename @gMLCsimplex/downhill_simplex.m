@@ -14,7 +14,7 @@ function gMLC_simplex=downhill_simplex(gMLC_simplex,gMLC_table,gMLC_parameters)
 if VERBOSE > 2, fprintf('Downhill simplex\n'),end
 
     %% The steps
-    gMLC_simplex.step_ordering(gMLC_table,gMLC_parameters);
+    gMLC_simplex.step_ordering(gMLC_parameters);
     gMLC_simplex.step_centroid(gMLC_table,gMLC_parameters);
 %     gMLC_simplex.step_shrink(gMLC_table,gMLC_parameters);
     % The next steps depends on the resuts of the reflection/centroid step

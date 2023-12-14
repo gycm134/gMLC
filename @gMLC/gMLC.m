@@ -113,6 +113,8 @@ methods
             val = obj.table;
           case 'history'
             val = obj.history;
+          case 'version'
+             val = obj.version;
           otherwise
             error ('@NumHandle/get: invalid PROPERTY "%s"',prop);
         end
@@ -144,6 +146,8 @@ methods
                 pout.table = val;
             case 'history'
                 pout.history = val;
+            case 'version'
+                pout.version = val;
           otherwise
             error ('@NumHandle/set: invalid PROPERTY for gMLC class');
         end

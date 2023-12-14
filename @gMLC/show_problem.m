@@ -7,7 +7,7 @@ function show_problem(gMLC)
 param = gMLC.parameters;
 
 %% Borders
-fprintf('====================== gMLC v%s ====================',gMLC.version)
+fprintf('====================== gMLC v%s ====================\n',gMLC.version)
 % Plot
 fprintf(['Name : ',param.Name,'\n'])
 fprintf('\n')

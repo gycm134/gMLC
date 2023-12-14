@@ -35,7 +35,7 @@ function parameters = tanhfitting_parameters()
     parameters.exploitation = 'Downhill Simplex';
     parameters.WeightedMatrix = 1; % 0:GPC interpolation, 1:coefficient interpolation
       % evolution
-    parameters.evolution = 0;
+    parameters.evolution = 1;
     parameters.NOffsprings = 10;
       % landscape description
     parameters.LandscapeType = 'none'; % 'CostSection','ClusteringDistance', 'ClusteringCorrelation', 'none'
