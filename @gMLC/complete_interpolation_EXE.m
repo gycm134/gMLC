@@ -8,6 +8,10 @@ function complete_interpolation_EXE(gMLC)
     cycle = gMLC.history.cycle;
     Name = gMLC.parameters.Name;
 
+    interpolation_type = gMLC.parameters.interpolation_type;
+    if not(strcmp(interpolation_type,'external'))
+        return
+    end
 
 %% Labels
     ID1 = gMLC.simplex.labels(1);

@@ -13,6 +13,7 @@ function PopulationLabels = ReplaceNMIndividuals(gMLC,PopulationLabels)
 %% Parameters
     VERBOSE = gMLC.parameters.verbose;
     problem_type = gMLC.parameters.problem_type;
+    interpolation_type = gMLC.parameters.interpolation_type;
 
 %% Remplace the non matrix individuals by matrix individuals
     % Find non-matrix individuals to substitute
@@ -28,15 +29,13 @@ function PopulationLabels = ReplaceNMIndividuals(gMLC,PopulationLabels)
 
     % Substitute
     gMLC.simplex.to_build = [NMIndiv,gMLC.table.ControlPoints(NMIndiv,:)];
-    if strcmp(problem_type,'external') && not(isempty(NMIndiv))
+    if strcmp(interpolation_type,'external') && not(isempty(NMIndiv))
         gMLC.simplex.to_build = [NMIndiv,gMLC.table.ControlPoints(NMIndiv,:)];
           if VERBOSE > 0, fprintf('Its time to interpolate! %i individuals\n',numel(NMIndiv)),end
+        fclose(fopen('CONTINUE_INTERPOLATION','w'));
         return
     else
-        for p=1:numel(NMIndiv)
-            Ind = gMLC.table.individuals(NMIndiv(p));
-            computesubstitute(Ind.ID,gMLC.table,gMLC.parameters);
-        end
+        computesubstitute(NMIndiv,gMLC.table,gMLC.parameters);
     end
 
     % Replace non-matrix individuals by a matrix representative

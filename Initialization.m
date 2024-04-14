@@ -26,7 +26,7 @@
 %% Information display
     % Header
     fprintf('====================== ')
-    fprintf('gMLC v0.1')
+    fprintf('gMLC v0.1.1')
     fprintf(' ==================\n')
     % Version
     disp(' Welcome to the gMLC software to solve non-convex')

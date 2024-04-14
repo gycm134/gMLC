@@ -198,23 +198,15 @@ function complete_EXE(gMLC,optimization_type,matJ)
 
 %% Finish 
 Nevaluations = sum(gMLC.table.evaluated>0);
-% Stop Exploitation
+% --- Stop Exploitation
 if Nevaluations >= ExternalStopExi
-    fclose(fopen(['save_runs/',Name,'/STOPEXI'], 'w'));
+    fclose(fopen('STOP_EXPLOITATION', 'w'));
     fprintf('Evolution done, lets downhill simplex now\n')
 end
 
-% if Nevaluations >= ExternalStopEvo
-%     system(['touch save_runs/',Name,'/STOP_GO_EXIEVO']);
-%     fprintf('Evolution done, lets combine evolution and exploitation now\n')
-% end
-% if Nevaluations >= ExternalStopExiEvo
-%     system(['touch save_runs/',Name,'/STOP_GO_EXI']);
-%     fprintf('Evolution and exploitation done, lets exploitation only now\n')
-% end
-% External Stop
+% --- External Stop
 if Nevaluations >= ExternalStop
-    fclose(fopen(['save_runs/',Name,'/STOP'], 'w'));
+    fclose(fopen('STOP_FINISHED', 'w'));
     fprintf('Exploitation done, its over\n')
 end
 end %method

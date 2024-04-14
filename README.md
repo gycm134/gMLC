@@ -1,5 +1,5 @@
 # gMLC
-# Guy Y. Cornejo Maceda, 01/07/2021
+# Guy Y. Cornejo Maceda, 14/04/2024
 # Copyright: 2021 Guy Cornejo Maceda (gy.cornejo.maceda@gmail.com)
 # CC-BY-SA
 
@@ -34,7 +34,7 @@ The main folder should contain the following folders and files:
 - *save_runs/* contains the savings.
 
 
-This contains a modified version of xML (https://github.com/gycm134/xMLC) which is an implementation of MLC based on linear genetic programming.
+This contains a modified version of xMLC (https://github.com/gycm134/xMLC) which is an implementation of MLC based on linear genetic programming.
 This work is also inspired by OpenMLC-MATLAB-2 (https://github.com/tduriez/OpenMLC-Matlab-2) by T. Duriez, an implementation of MLC based on tree-based genetic programming.
 
 
@@ -103,6 +103,9 @@ gmlc.load('NameOfMyRun');
 ## Versioning
 
 Version 0.1 - First GitHub release.
+
+Version 0.1.1 - Addition of scripts and functions for an easy interface with external experiments.
+See the ExternalExperimentProcess.m file.
 
 ## Author
 

@@ -1,5 +1,4 @@
 Initialization
-Restart
 gmlc=gMLC('oscillator'); % /!\ To load a different problem.
 % See the plant/oscillator folder for more information on a problem.
 gmlc.parameters.Name='My_oscillator';

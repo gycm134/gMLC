@@ -13,32 +13,46 @@ function TO_EVALUATE=computesubstitute(TO_SUBSTITUTE,gMLC_table,gMLC_parameters)
 %% Initialization
 TO_EVALUATE = 0*TO_SUBSTITUTE;
 
- 	
+if numel(TO_SUBSTITUTE)>0
+
+% --- Allocation
+    list_individuals_to_substitute(numel(TO_SUBSTITUTE)) =  gMLCind;
+    list_ControlPoints = zeros(numel(TO_SUBSTITUTE),numel(gMLC_table.ControlPoints(TO_SUBSTITUTE(1),:)));
+    list_individuals(numel(TO_SUBSTITUTE)) =  gMLCind;
+% --- Initialization
+    for p=1:length(TO_SUBSTITUTE)
+        list_individuals_to_substitute(p) = gMLC_table.individuals(TO_SUBSTITUTE(p));
+        list_ControlPoints(p,:) = gMLC_table.ControlPoints(TO_SUBSTITUTE(p),:);
+    end
 
 %% Loop over the individuals
-for p=1:length(TO_SUBSTITUTE)
-      % Initialization
-      Ind2substitute = gMLC_table.individuals(TO_SUBSTITUTE(p));
-      ControlPoints = gMLC_table.ControlPoints(TO_SUBSTITUTE(p),:);
+parfor p=1:length(TO_SUBSTITUTE)
+      % --- Initialization
+      Ind2substitute = list_individuals_to_substitute(p);
+      ControlPoints = list_ControlPoints(p,:);
       Indz = gMLCind;
-      % Build and complete
+      % --- Build and complete
       qua = Indz.build_to_fit(ControlPoints,gMLC_table,gMLC_parameters);
       Indz.cost = Ind2substitute.cost;
       Indz.description.type = 'substitute';
       Indz.description.quality = qua;
       Indz.description.subtype = Ind2substitute.description.subtype;
       Indz.description.miscellaneous = Ind2substitute.ID;
+      % --- Store in list
+      list_individuals(p) = Indz;
+end
 
-
-
+for p=1:length(TO_SUBSTITUTE)
       % Add to table
-      ID = gMLC_table.add(Indz,gMLC_parameters);
-      Ind2substitute.description.miscellaneous = ID;
-      Indz.vertices = ID;
-      Indz.coefficients = 1;
+      ID = gMLC_table.add(list_individuals(p),gMLC_parameters);
+      gMLC_table.individuals(TO_SUBSTITUTE(p)).description.miscellaneous = ID;
+      list_individuals(p).vertices = ID;
+      list_individuals(p).coefficients = 1;
 %       fprintf('QUELQUE CHOSE\n')
       % To evaluate
       TO_EVALUATE(p) = ID;
+end
+
 end
 
 end %method
