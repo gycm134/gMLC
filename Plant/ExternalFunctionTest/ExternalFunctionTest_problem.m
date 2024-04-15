@@ -14,7 +14,7 @@ function  J_out = ExternalFunctionTest_problem(b_cell,parameters,ID,direc,visu)
 %% Control law synthesis
 bx=b_cell{1};
 % definition
-eval(['b = @(T)(' bx '.*ONE);']);
+eval(['b = @(t)(' bx '.*ONE);']);
 
 %% Equation resolution
     % Equations

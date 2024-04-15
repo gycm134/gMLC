@@ -64,7 +64,7 @@ parameters.ExternalStopExi=-1;
             % hi(t)
             ProblemParameters.NumberTimeDependentFunctions = 1; % Periodic functions only for now
             ProblemParameters.TimeDependentFunctions(1,1) = {'T'}; % syntax in MATLAB/Octave
-            ProblemParameters.TimeDependentFunctions(2,1) = {'T'}; % syntax in the problem (if null then comment)
+            ProblemParameters.TimeDependentFunctions(2,1) = {'t'}; % syntax in the problem (if null then comment)
             ProblemParameters.InputNumber = ProblemParameters.NumberSensors+ProblemParameters.NumberTimeDependentFunctions; 
             % Fi = 135*[1.618^(-2),1.618^(-1),1.618,1.618^2]; % Add the required frequencies
           % Outputs

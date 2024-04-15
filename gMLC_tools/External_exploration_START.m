@@ -22,6 +22,10 @@ function External_exploration_START(gMLC_name)
     
 %% Create Setx file?
     gmlc.export_set_EXE('EVO');
+
+%% Write the control laws into the file save_runs/tmp/ControlLawSelect.m.
+    labels = gmlc.simplex.waiting_room.labels;
+    gmlc.expe_create_control_select(labels);
     
 %% Save
     gmlc.save;
