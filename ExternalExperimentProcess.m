@@ -60,6 +60,7 @@ while not(exist('STOP_FINISHED','file'))
     while not(exist('STOP_EXPLOITATION','file'))
         External_exploitation_START(gMLC_name);
         % ~~~~~~~~~~~ EVALUATIONS ~~~~~~~~~~~
+%                 Evaluation_exploitation_all(gMLC_name,n); % To save time with parallel simulations
                 Evaluation_exploitation(gMLC_name,n);
         % ~~~~~~~~~~~ EVALUATIONS ~~~~~~~~~~~
         External_exploitation_END(gMLC_name); n=n+1;
