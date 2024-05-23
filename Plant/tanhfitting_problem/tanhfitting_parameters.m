@@ -16,6 +16,7 @@ function parameters = tanhfitting_parameters()
       % Problem
       parameters.problem = 'tanhfitting'; % MOD - /!\ Name of the problem. This name relates to the file "toy_problem.m" in the plant/toy_problem folder.
       parameters.problem_type = 'internal'; % "internal" for evaluation of the individuals in the same matlab session; 'external' for experiment or coupling with a solver.
+      parameters.interpolation_type = 'internal'; % If "external" compute the secondary MLC problem outside the original session.
       parameters.external_interpolation = 0;% Compute the secondary MLC problem outside the original session
 
 %% gMLC parameters

@@ -16,6 +16,7 @@ function parameters = oscillator_parameters()
     % Problem
     parameters.problem = 'oscillator';
     parameters.problem_type = 'internal'; % 'external'
+    parameters.interpolation_type = 'internal'; % If "external" compute the secondary MLC problem outside the original session.
     parameters.external_interpolation = 0;% Compute the secondary MLC problem outside the original session
 
 %% gMLC parameters

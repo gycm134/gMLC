@@ -15,9 +15,9 @@
 % scripts Resume_Exploitation_ExternalExperimentProcess.m and
 % Resume_ExternalExperimentProcess.m in gMLC_tools to resume the learning.
 % The scripts External_{initialization,exploration,exploitation}_START.m
-% use the expe_create_control_select.m function to create a control law
-% function to be used in LabView. The control law function is saved in
-% save_runs/tmp/.
+% use the expe_create_control_select.m or expe_create_control_ID_select.m 
+% function to create a control law % function to be used in LabView. The 
+% control law function is saved in % save_runs/tmp/.
 %
 % Guy Y. Cornejo Maceda, 14/04/2024
 

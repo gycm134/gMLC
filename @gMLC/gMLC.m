@@ -59,6 +59,7 @@ methods
         complete_REC_S_EXE(obj,opti_type);
         after_REC_EXE(obj)
         expe_create_control_select(obj,IND);
+        expe_create_control_ID_select(obj,IND);
     % Landscape
         PopulationLabels = build_evolution_set(obj);
         LandscapeLabels = landscape_description(obj);
