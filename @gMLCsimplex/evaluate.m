@@ -25,7 +25,7 @@ if VERBOSE > 2, fprintf('     Evaluation of the simplex\n'),end
       true_ind_to_eval = [];
       for p=1:Ne
         cost = gMLC_table.individuals(ind_to_eval(p)).cost{1};
-        if cost<0
+        if isinf(cost)
           true_ind_to_eval = [true_ind_to_eval,ind_to_eval(p)];
         end
       end
@@ -49,7 +49,7 @@ if VERBOSE > 2, fprintf('%i individual(s) to evaluate\n',Ne),end
         ID = gMLC_simplex.labels(p);
         gMLC_simplex.costs(p) = gMLC_table.individuals(ID).cost{1};
       end
-      if sum(gMLC_simplex.costs<0)
+      if sum(isinf(gMLC_simplex.costs))
         error('All individuals have not been evaluated')
       end
      gMLC_simplex.status.evaluated = 'evaluated';

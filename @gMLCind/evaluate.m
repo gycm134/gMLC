@@ -16,7 +16,7 @@ function indiv_cost=evaluate(gMLC_ind,gMLC_parameters,visu,force_eval)
 if VERBOSE > 4, fprintf('%i',gMLC_ind.ID),end
 
 %% Verify
-    if ( gMLC_ind.cost{1} > 0 && not(force_eval) )
+    if ( gMLC_ind.cost{1} < Inf && not(force_eval) )
       if VERBOSE > 4, fprintf('ad. '),end
       indiv_cost = gMLC_ind.cost{1};
       return
@@ -65,7 +65,7 @@ end
         
 %% Update properties
     cost = gMLC_ind.cost;
-    if cost{1}<0,cost={};end
+    if isinf(cost{1}),cost={};end
     gMLC_ind.cost = vertcat(cost,J);
     eval_time = gMLC_ind.evaluation_time;
     if eval_time==0, eval_time=[];end

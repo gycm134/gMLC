@@ -45,7 +45,7 @@ methods
     function obj = gMLCind()
         % Initialize properties
             obj.matrix = [];
-            obj.cost = {-1};
+            obj.cost = {Inf};
             obj.control_law = {};
             obj.evaluation_time=0;
             obj.description.type = 'not generated';

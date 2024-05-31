@@ -48,7 +48,7 @@ classdef MLCind < handle
         % Constructor
         function obj = MLCind
             obj.chromosome = [];
-            obj.cost = {-1};
+            obj.cost = {Inf};
             obj.control_law = {};
             obj.EI = [];
             obj.occurences = 1;

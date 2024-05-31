@@ -31,7 +31,7 @@ function MLC_ind = evaluate_indiv(MLC_ind,MLC_parameters,visu)
     control_law = limit_to(control_law,actuation_limit);
     
 %% Evaluation
-if MLC_ind.cost{1}==-1 || MLC_parameters.MultipleEvaluations>0
+if isinf(MLC_ind.cost{1}) || MLC_parameters.MultipleEvaluations>0
     % Number of evaluations: at least 1
     NEvaluations = max([MLC_parameters.MultipleEvaluations,1]);
     % Loop for the number of evaluations
@@ -46,7 +46,7 @@ if MLC_ind.cost{1}==-1 || MLC_parameters.MultipleEvaluations>0
         end
         
         % Add value to MLC_indiv
-        if MLC_ind.cost{1}<0, MLC_ind.cost={};end
+        if isinf(MLC_ind.cost{1}), MLC_ind.cost={};end
         MLC_ind.cost = vertcat(MLC_ind.cost,J);
         MLC_ind.evaluation_time = [MLC_ind.evaluation_time;toc];
         
